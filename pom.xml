@@ -15,6 +15,7 @@
 		<mysql.version>5.1.19</mysql.version>
 		<log4j.version>1.2.17</log4j.version>
 		<commons.logging.version>1.1.1</commons.logging.version>
+		<version.jackson.core>2.4.1</version.jackson.core>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -88,6 +89,12 @@
 		
 		<!-- Other -->
 		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>2.4.2</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
 			<version>1.1.2</version>
@@ -126,6 +133,23 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.10</version>
 		</dependency>
+		
+		<!-- Extends Jackson; supports Hibernate datatypes, so: -->
+  	<dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${version.jackson.core}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${version.jackson.core}</version>
+    </dependency>
+    <dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-annotations</artifactId>
+		<version>${version.jackson.core}</version>
+	</dependency>
 				
 	</dependencies>
 	<build>
